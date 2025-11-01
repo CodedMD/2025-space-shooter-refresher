@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         
             _canFire = Time.time + _fireRate;
            
-            Instantiate(lazerPrefab, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            Instantiate(lazerPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
 
         
     }
