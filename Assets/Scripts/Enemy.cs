@@ -6,10 +6,21 @@ public class Enemy : MonoBehaviour
 {
     private float speed = 4.0f;
     private Player _player;
+    [SerializeField]
+    private Animator _enemyAnimator;
     // Start is called before the first frame update
     void Start()
     {
        _player = GameObject.Find("Player").GetComponent<Player>();
+        _enemyAnimator = gameObject.GetComponent<Animator>();
+        if (_player == null)
+        {
+            Debug.LogError("Player is null");
+        }
+        if (_enemyAnimator == null)
+        {
+            Debug.LogError("Enemy Animator is null");
+        }
 
     }
 
@@ -26,25 +37,40 @@ public class Enemy : MonoBehaviour
         }
     }
 
+   public void EnemyDeath()
+    {
+       _enemyAnimator.SetTrigger("OnEnemyDeath");
+        speed = 0;
+       
+
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        ;
+        
         if (other.tag == "Lazer")
         {
+            
             Destroy(other.gameObject);
             if (_player!=null)
             {
                 _player.Scoreup(10);
             }
-            Destroy(this.gameObject);
+            EnemyDeath();
+            Destroy(this.gameObject,52.5f);
 
         }
         else if (other.tag == "Player")
         {
             
             if (_player != null)
+            {
                 _player.Damage();
-            Destroy(this.gameObject);
+            }
+
+            EnemyDeath();
+
+            Destroy(this.gameObject,2.5f);
 
             
         }

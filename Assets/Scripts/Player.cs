@@ -20,10 +20,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _score;
     private UI_Manager _uiManager;
+    [SerializeField]
+    private GameObject _rightHurt;
+    [SerializeField]
+    private GameObject _leftHurt;
     // Start is called before the first frame update
     void Start()
     {
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+       _rightHurt.SetActive(false);
+        _leftHurt.SetActive(false);
         _isShieldActive = false;
         _isTripleShotActive = false;
         _isSpeedBoostActive = false;
@@ -102,8 +108,20 @@ public class Player : MonoBehaviour
 
 
         _lives--;
-         
-       _uiManager.UpdateLives(_lives);
+         if (_lives < 3)
+        {
+            _rightHurt.SetActive(true);
+        }
+         if (_lives < 2)
+        {
+            _leftHurt.SetActive(true);
+        }
+
+
+
+
+
+            _uiManager.UpdateLives(_lives);
 
         if (_lives < 1)
         {

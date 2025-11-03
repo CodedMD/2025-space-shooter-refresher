@@ -17,7 +17,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         
-        StartCoroutine(SpawnRoutine());
     }
 
     // Update is called once per frame
@@ -28,8 +27,14 @@ public class SpawnManager : MonoBehaviour
     // Spawn enemies every 5 seconds
     // IEnumerator SpawnEnemyRoutine()  
     // use a coroutine to spawn enemies
+
+    public void StartSpawning()
+    {
+        StartCoroutine(SpawnRoutine());
+    }
     IEnumerator SpawnRoutine()
     {
+        yield return new WaitForSeconds(3.0f);
         while (!_stopSpawning)
         {
             SpawnEnemy();
