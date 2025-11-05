@@ -5,9 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 5f;
+    [SerializeField]
+    private GameObject _rightHurt;
+    [SerializeField]
+    private GameObject _leftHurt;
     [SerializeField] public GameObject lazerPrefab;
     [SerializeField]public GameObject _tripleShotPrefab;
     [SerializeField] public GameObject playerShield;
+    [SerializeField] private GameObject _thrusterBoost;
+
     [SerializeField] private float _fireRate = 0.1f;
     private float _canFire = -1f;
     [SerializeField]
@@ -21,9 +27,15 @@ public class Player : MonoBehaviour
     private int _score;
     private UI_Manager _uiManager;
     [SerializeField]
-    private GameObject _rightHurt;
+    private AudioSource _audioSource;
     [SerializeField]
-    private GameObject _leftHurt;
+    private AudioClip _lazerAudio;
+    [SerializeField]
+    private AudioClip _explosionAudio;
+    [SerializeField]
+    private AudioClip _powerUpClip;
+
+
     // Start is called before the first frame update
     void Start()
     {
