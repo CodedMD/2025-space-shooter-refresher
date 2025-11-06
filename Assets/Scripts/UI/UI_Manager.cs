@@ -8,17 +8,36 @@ public class UI_Manager : MonoBehaviour
 {
     [SerializeField]
     private Text _scoreText;
+
+    // Shield variables
+    [SerializeField]
+    private Sprite[] _shieldSprites;
+    [SerializeField]
+    private Image _shieldImages;
+   
+    // Ammo variables
+    [SerializeField]
+    private Sprite[] _ammoSprites;
+    [SerializeField]
+    private Image _ammoImages;
+
+    // Lives variables
     [SerializeField]
     private Sprite[] _livesSprites;
     [SerializeField]
     private Image _livesImage;
+
+    // Game Over variables
     [SerializeField]
     private Text gameOver_Text;
     [SerializeField]
     private Text restartText;
+
+    // Reference to Player and Game Manager
     private Player _player;
     [SerializeField]
     private GameManager gameManager;
+
     // Thruster power variables
     [SerializeField]
     private Slider _thrusterBar;
@@ -33,7 +52,11 @@ public class UI_Manager : MonoBehaviour
         gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         gameOver_Text.gameObject.SetActive(false);
         restartText.gameObject.SetActive(false);
+        _shieldImages.gameObject.SetActive(false);
+        _ammoImages.gameObject.SetActive(true);
         _scoreText.text = "Score: " + 0;
+
+
         if (gameManager == null)
         {
             Debug.LogError("Game Manager is NULL");
@@ -44,6 +67,24 @@ public class UI_Manager : MonoBehaviour
     public void UpdateScore(int playerScore) { 
         _scoreText.text = "Score:"+ playerScore;
     
+    }
+    // Update the ammo image based on current ammo count
+    public void UpdateAmmo(int currentAmmo)
+    {
+        currentAmmo = Mathf.Clamp(currentAmmo, 0, 15);
+        _ammoImages.sprite = _ammoSprites[currentAmmo];
+        if (currentAmmo == 0)
+        {
+            
+        }
+       
+    }
+    // Update the shield image based on current shield strength
+    public void UpdateShield(int currentShieldLevel)
+    {
+        _shieldImages.gameObject.SetActive(true);
+        _shieldImages.sprite = _shieldSprites[currentShieldLevel];
+
     }
     // Update the lives image based on current lives
     public void UpdateLives(int currentLives)

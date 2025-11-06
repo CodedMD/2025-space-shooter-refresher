@@ -11,25 +11,41 @@ public class Player : MonoBehaviour
     private GameObject _leftHurt;
     [SerializeField] public GameObject lazerPrefab;
     [SerializeField]public GameObject _tripleShotPrefab;
+    // Shield Variables
     [SerializeField] public GameObject playerShield;
-    [SerializeField] private GameObject _thrusterBoost;
+    [SerializeField] private GameObject _playerHurtShield;
+    private bool _isShieldActive = false;
+    private bool _ishurtShieldActive = false;
+    [SerializeField]
+    private int _shieldLives = 3;
 
+
+
+    [SerializeField] private GameObject _thrusterBoost;
     [SerializeField] private float _fireRate = 0.1f;
     private float _canFire = -1f;
     [SerializeField]
     private int _lives = 3;
+ 
+
     [SerializeField] private Material _mat;
     private SpawnManager _spawnManager;
      private bool _isTripleShotActive = false;
     private bool _isSpeedBoostActive;
-    private bool _isShieldActive;
+
     [SerializeField]
     private int _score;
     private UI_Manager _uiManager;
     [SerializeField]
     private AudioSource _audioSource;
+
+    // Lazer Variables
+    [SerializeField]
+    private int _ammo = 15;
     [SerializeField]
     private AudioClip _lazerAudio;
+    [SerializeField]
+    private AudioClip _noAmmoAudio;
     [SerializeField]
     private AudioClip _explosionAudio;
     [SerializeField]
@@ -49,6 +65,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         _thrusterBarPrecentage = 100f;
+        //_shieldLives = 3;
+        _ammo = 15;
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
        _rightHurt.SetActive(false);
         _leftHurt.SetActive(false);
@@ -67,11 +85,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculateMovement();
-       
+        if (_isShieldActive == true)
+        {
+
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
-            _audioSource.PlayOneShot(_lazerAudio);
+            
             LazerShoot();
         }
       
@@ -160,32 +181,71 @@ public class Player : MonoBehaviour
 
     void LazerShoot()
     {
-        _canFire = Time.time + _fireRate;
-        if (_isTripleShotActive == true)
+        _ammo = Mathf.Clamp(_ammo,0, 15);
+        _ammo--;
+       _uiManager.UpdateAmmo(_ammo);
+        if (_ammo >=0)
         {
-            tripleshot();
+
+            _canFire = Time.time + _fireRate;
+            if (_isTripleShotActive == true)
+            {
+                tripleshot();
+            }
+            else
+            {
+                _audioSource.PlayOneShot(_lazerAudio);
+                Instantiate(lazerPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
+            }
         }
-        else
+        else if (_ammo <= 0)
         {
-            Instantiate(lazerPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
+            Debug.Log("Out of Ammo");
+            _ammo = 0;
+            _audioSource.PlayOneShot(_noAmmoAudio);
+
+
         }
-                   
     }
     void tripleshot()
     {
+        _audioSource.PlayOneShot(_lazerAudio);
         Instantiate(_tripleShotPrefab, transform.position + new Vector3(-0.5f, 1.05f, 0), Quaternion.identity);
        
     }
 
     public void Damage()
     {
+        
         if (_isShieldActive == true)
         {
-            _isShieldActive = false;
-            return;
+            _shieldLives--;
+            _uiManager.UpdateShield(_shieldLives);
+            if (_shieldLives == 3)
+            {
+                StartCoroutine(ShieldPowerDownRoutine());
+                return;
+            }
+            if (_shieldLives == 2)
+            {
+                StartCoroutine(ShieldPowerDownRoutine());
+                return;
+            }
+
+            if (_shieldLives == 1)
+            {
+                StartCoroutine(ShieldPowerDownRoutine());
+                return;
+            }
+            if (_shieldLives <= 0)
+            {
+                _isShieldActive = false;
+                playerShield.SetActive(false);
+                _uiManager.UpdateShield(_shieldLives);
+                return;
+            }
            
         }
-        
 
 
         _lives--;
@@ -228,10 +288,43 @@ public class Player : MonoBehaviour
 
 
     //powerup methods
-
+    public void HealPlayer()
+    {
+        if (_lives <= 2)
+        {
+            _lives++;
+            _uiManager.UpdateLives(_lives);
+            if (_lives == 3)
+            {
+                _leftHurt.SetActive(false);
+                _rightHurt.SetActive(false);
+            }
+            if (_lives == 2)
+            {
+                _rightHurt.SetActive(true);
+                _leftHurt.SetActive(false);
+            }
+            if (_lives == 1)
+            {
+                _rightHurt.SetActive(true);
+                _leftHurt.SetActive(true);
+            }
+        }
+        else
+        {
+            return;
+        }
+    }
+    public void RefillAmmo()
+    {
+        _audioSource.PlayOneShot(_powerUpClip);
+        _ammo = 15;
+        _uiManager.UpdateAmmo(_ammo);
+    }
     public void ActivateTripleShot()
     {
         _isTripleShotActive = true;
+        _ammo = 15;
         _audioSource.PlayOneShot(_powerUpClip);
         StartCoroutine(TripleShotPowerDownRoutine());
     }
@@ -249,11 +342,18 @@ public class Player : MonoBehaviour
     }
     public void ActivateShield()
     {
+        
         _audioSource.PlayOneShot(_powerUpClip);
         _isShieldActive = true;
-        //change material color to blue
+        _shieldLives =3;
+        _uiManager.UpdateShield(_shieldLives);
         playerShield.SetActive(true);
-        StartCoroutine(ShieldPowerDownRoutine());
+      
+
+        
+      
+       
+       //StartCoroutine(ShieldPowerDownRoutine());
     }
 
 
@@ -274,10 +374,14 @@ public class Player : MonoBehaviour
     }
     IEnumerator ShieldPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5.0f);
-        _isShieldActive = false;
-      
         playerShield.SetActive(false);
+        _playerHurtShield.SetActive(true);
+        yield return new WaitForSeconds(0.30f);
+        _playerHurtShield.SetActive(false);
+        playerShield.SetActive(true);
+        //_playerHurtShield.SetActive(false);
+
+        
     }
     IEnumerator ThrusterRecoverRoutine()
     {
@@ -299,5 +403,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "EnemyLazer")
+        {
+           Damage();
+
+        }
+    }
 
 }

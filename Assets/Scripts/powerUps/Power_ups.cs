@@ -45,6 +45,12 @@ public class Power_ups : MonoBehaviour
                           case 2:
                            player.ActivateShield();
                              break;
+                            case 3:
+                                player.RefillAmmo();
+                                break;
+                        case 4:
+                            player.HealPlayer();
+                            break;
                     default:
                         Debug.Log("Default case");
                         break;
