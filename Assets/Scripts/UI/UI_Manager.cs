@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class UI_Manager : MonoBehaviour
     private Player _player;
     [SerializeField]
     private GameManager gameManager;
+    // Thruster power variables
+    [SerializeField]
+    private Slider _thrusterBar;
+    [SerializeField]
+    private TMP_Text _thrusterBarPrecentage;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +54,13 @@ public class UI_Manager : MonoBehaviour
             GameOverSequence();
 
         }
+    }
+    // Update the thruster bar and percentage text
+    public void UpdateThrusterBar(float currentBoostLevel)
+    {
+        currentBoostLevel = Mathf.Clamp(currentBoostLevel, 0, 100);
+        _thrusterBar.value = currentBoostLevel;
+        _thrusterBarPrecentage.text = Mathf.RoundToInt(currentBoostLevel)  + "%";
     }
 
     public void GameOverSequence()

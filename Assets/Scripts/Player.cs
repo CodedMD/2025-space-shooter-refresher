@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private int _lives = 3;
     [SerializeField] private Material _mat;
     private SpawnManager _spawnManager;
-    private bool _isTripleShotActive = false;
+     private bool _isTripleShotActive = false;
     private bool _isSpeedBoostActive;
     private bool _isShieldActive;
     [SerializeField]
@@ -35,10 +35,20 @@ public class Player : MonoBehaviour
     [SerializeField]
     private AudioClip _powerUpClip;
 
+    // Thruster power variables
+    [SerializeField]
+    private float _thrusterBarPrecentage;
+    private bool _isThrusterBoostActive = false;
+    private bool _thrusterRecover = false;
+    private bool _isThrusterBaseActive = true;
+   
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        _thrusterBarPrecentage = 100f;
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
        _rightHurt.SetActive(false);
         _leftHurt.SetActive(false);
@@ -83,12 +93,70 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(-9.36f, transform.position.y, 0);
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (_thrusterRecover == false)
+            {
+                ThrusterBoostActive();
+                speed = 9.5f;
+            }
+            else if (_thrusterRecover == true)
+            {
+                ThrusterBaseActive();
+                speed = 3.5f;
+            }
+            if (_thrusterBarPrecentage <= 0f)
+            {
+                _thrusterBarPrecentage = 0;
+                ThrusterBaseActive();
+          
+            }
+           // Debug.LogError("Thruster initiated");
+            StopCoroutine(ThrusterRecoverRoutine());
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            ThrusterBaseActive();
+        }
+        else if (_thrusterBarPrecentage <= 0)
+        {
+            StartCoroutine(ThrusterRecoverRoutine());
+            ThrusterBaseActive();
+            if(_thrusterBarPrecentage >= 100f)
+            {
+                //_thrusterBarPrecentage = 100f;
+                StopCoroutine(ThrusterRecoverRoutine());
+            }
+        }
         
        
     }
    
+    
+    
+    void ThrusterBaseActive()
+    {
+        if (_isThrusterBaseActive == true)
+        {
+            speed = 3.5f;
+           // _thrusterBase.gameObject.SetActive(true);
+            _thrusterBoost.gameObject.SetActive(false);
+        }
+    }
+    void ThrusterBoostActive()
+    {
+        if (_thrusterBarPrecentage > 1 || _thrusterBarPrecentage < 100)
+        {
+            _thrusterRecover = false;
+            _isThrusterBoostActive = true;
+            _thrusterBoost.gameObject.SetActive(true);
+            _thrusterBarPrecentage -= 10.0f * 5 * Time.deltaTime;
+            //Debug.LogError("Thruster Active");
 
-   
+        }
+        _uiManager.UpdateThrusterBar(_thrusterBarPrecentage);
+    }
 
     void LazerShoot()
     {
@@ -210,6 +278,25 @@ public class Player : MonoBehaviour
         _isShieldActive = false;
       
         playerShield.SetActive(false);
+    }
+    IEnumerator ThrusterRecoverRoutine()
+    {
+        while (_thrusterBarPrecentage <= 100f)
+        {
+            yield return new WaitForSeconds(0.8f);
+            _thrusterRecover = true;
+            _thrusterBarPrecentage += 500/100 * Time.deltaTime;
+            _uiManager.UpdateThrusterBar(_thrusterBarPrecentage);
+            yield return new WaitForSeconds(0.5f);
+
+            if(_thrusterBarPrecentage >= 100f)
+            {
+                _thrusterBarPrecentage = 100f;
+                _uiManager.UpdateThrusterBar(_thrusterBarPrecentage);
+                _thrusterRecover = false;
+                break;
+            }
+        }
     }
 
 
