@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
+            _audioSource.PlayOneShot(_lazerAudio);
             LazerShoot();
         }
       
@@ -163,11 +164,12 @@ public class Player : MonoBehaviour
     public void ActivateTripleShot()
     {
         _isTripleShotActive = true;
-
+        _audioSource.PlayOneShot(_powerUpClip);
         StartCoroutine(TripleShotPowerDownRoutine());
     }
     public void ActivateSpeedBoost()
     {
+        _audioSource.PlayOneShot(_powerUpClip);
         _isSpeedBoostActive = true;
         if (_isSpeedBoostActive == true)
         {
@@ -179,6 +181,7 @@ public class Player : MonoBehaviour
     }
     public void ActivateShield()
     {
+        _audioSource.PlayOneShot(_powerUpClip);
         _isShieldActive = true;
         //change material color to blue
         playerShield.SetActive(true);

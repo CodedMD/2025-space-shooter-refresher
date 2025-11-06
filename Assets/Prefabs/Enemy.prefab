@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyAnimator: {fileID: 495575474338365410}
+  enemyLazerPrefab: {fileID: 3441365204016482869, guid: 3dacc71bec702cb458c6c588ef29eb2f,
+    type: 3}
 --- !u!61 &8981173881920086421
 BoxCollider2D:
   m_ObjectHideFlags: 0

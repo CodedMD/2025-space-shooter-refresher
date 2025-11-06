@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
     private Player _player;
     [SerializeField]
     private Animator _enemyAnimator;
+    [SerializeField]
+    private  GameObject enemyLazerPrefab;
+    private int _canFire = -1;
+    private float _fireRate = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EnemyFire();
         Vector3 direction = new Vector3(0,-1,0);
         // move the player
         transform.Translate(direction * speed * Time.deltaTime);
@@ -34,6 +39,21 @@ public class Enemy : MonoBehaviour
         {
             float randomX = Random.Range(-8f, 8f);
             transform.position = new Vector3(randomX, 7, 0);
+        }
+    }
+
+    public void EnemyFire()
+    { 
+          if(Time.time > _canFire)
+        {
+            _fireRate = Random.Range(3.0f, 7.0f);
+            _canFire = (int)(Time.time + _fireRate);
+            GameObject enemyLazer = Instantiate(enemyLazerPrefab, transform.position, Quaternion.identity);
+            Lazer[] lazers = enemyLazer.GetComponentsInChildren<Lazer>();
+            for (int i = 0; i < lazers.Length; i++)
+            {
+                lazers[i].AssignEnemyLazer();
+            }
         }
     }
 
@@ -47,8 +67,9 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if (other.tag == "Lazer")
+
+       
+        if (other.tag == "PlayerLazer")
         {
             
             Destroy(other.gameObject);
@@ -57,6 +78,7 @@ public class Enemy : MonoBehaviour
                 _player.Scoreup(10);
             }
             EnemyDeath();
+            Destroy(GetComponent< Collider2D >());
             Destroy(this.gameObject,52.5f);
 
         }
@@ -69,7 +91,7 @@ public class Enemy : MonoBehaviour
             }
 
             EnemyDeath();
-
+            Destroy(GetComponent<Collider2D>());
             Destroy(this.gameObject,2.5f);
 
             
