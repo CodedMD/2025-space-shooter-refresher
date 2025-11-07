@@ -6,11 +6,11 @@ public class SpawnManager : MonoBehaviour
 {
 
    
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject[] _enemyPrefab;
     [SerializeField] private GameObject _enemyHolder;
     [SerializeField] private GameObject _powerupHolder;
     [SerializeField]public GameObject[] _powerups;
-   
+     
     //public GameObject[] _powerupIDs;
     private float randomX => Random.Range(-8f, 8f); 
     private bool _stopSpawning = false;
@@ -48,8 +48,8 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnEnemy()
     {
-        
-        GameObject NewEnemy = Instantiate(_enemyPrefab, new Vector3(randomX, 7, 0), Quaternion.identity);
+        int randomE = Random.Range(0, 2);
+        GameObject NewEnemy = Instantiate(_enemyPrefab[randomE], new Vector3(randomX, 7, 0), Quaternion.identity);
         NewEnemy.transform.parent = _enemyHolder.transform;
     }
 

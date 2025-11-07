@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
             _canFire = (int)(Time.time + _fireRate);
             GameObject enemyLazer = Instantiate(enemyLazerPrefab, transform.position, Quaternion.identity);
             Lazer[] lazers = enemyLazer.GetComponentsInChildren<Lazer>();
-           
+
             for (int i = 0; i < lazers.Length; i++)
             {
                 lazers[i].AssignEnemyLazer();
