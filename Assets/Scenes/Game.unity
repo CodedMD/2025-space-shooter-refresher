@@ -187,7 +187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 120217678}
   - component: {fileID: 120217680}
-  - component: {fileID: 120217679}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -209,28 +208,6 @@ Transform:
   m_Father: {fileID: 1800319839}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &120217679
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120217677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
-  m_AngularDampingMode: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AngularDamping: 0
 --- !u!114 &120217680
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -956,7 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ImpulseDefinition:
     m_ImpulseChannel: 1
-    m_RawSignal: {fileID: 11400000, guid: a3dacaec0287d7444b4bd276816e1666, type: 2}
+    m_RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
     m_RepeatMode: 0
@@ -1534,7 +1511,7 @@ RectTransform:
   - {fileID: 1720522983}
   - {fileID: 2087255186}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3165,7 +3142,7 @@ PrefabInstance:
     - target: {fileID: 5310822869787754780, guid: aac373a8d9480c14d82fe4979400dedf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5310822869787754780, guid: aac373a8d9480c14d82fe4979400dedf,
         type: 3}

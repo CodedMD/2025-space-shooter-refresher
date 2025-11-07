@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4745656616526991311}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyAnimator: {fileID: 495575474338365410}
   enemyLazerPrefab: {fileID: 3441365204016482869, guid: 3dacc71bec702cb458c6c588ef29eb2f,
+    type: 3}
+  _sweeper: {fileID: 0}
+  _explosionPrefab: {fileID: 8981608935107439260, guid: cfe200a5d8df11c43a7e05b74c0e9f94,
     type: 3}
   _audioSource: {fileID: 4745656616526991311}
   _explosionAudio: {fileID: 8300000, guid: a885c043fab7e46438bba03ba9dab6bc, type: 3}

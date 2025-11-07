@@ -29,8 +29,13 @@ public class Ninja_Star_Shot : MonoBehaviour
         yield return new WaitForSeconds(1f);
         transform.Rotate(Vector3.forward * _rotationSpeed * 50 * Time.deltaTime);
         yield return new WaitForSeconds(2.0f);
-        int randomIndex = Random.Range(0, _ninjaStarPrefab.Length);
-       _ninjaStarPrefab[randomIndex].SetActive(true);
+        int randomIndex = Random.Range(0,4);
+       
+        if (_ninjaStarPrefab[randomIndex] != null)
+        {
+            _ninjaStarPrefab[randomIndex].SetActive(true);
+        }
+        
         yield return new WaitForSeconds(5.0f);
     }
 }

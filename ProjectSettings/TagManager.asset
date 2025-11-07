@@ -8,6 +8,8 @@ TagManager:
   - EnemyLazer
   - PlayerLazer
   - PowerUps
+  - Enemy
+  - Enemy_Sweeper
   layers:
   - Default
   - TransparentFX

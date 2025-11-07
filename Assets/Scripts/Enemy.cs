@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     private Animator _enemyAnimator;
     [SerializeField]
     private  GameObject enemyLazerPrefab;
+  
+    [SerializeField]
+    private GameObject _explosionPrefab;
 
     private int _canFire = -1;
     private float _fireRate = 3.0f;
@@ -21,6 +24,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ;
         _audioSource = GetComponent<AudioSource>();
         _player = GameObject.Find("Player").GetComponent<Player>();
         _enemyAnimator = gameObject.GetComponent<Animator>();
@@ -74,8 +78,9 @@ public class Enemy : MonoBehaviour
 
    public void EnemyDeath()
     {
-        _audioSource.PlayOneShot(_explosionAudio);
-        _enemyAnimator.SetTrigger("OnEnemyDeath");
+        //_audioSource.PlayOneShot(_explosionAudio);
+        //  _enemyAnimator.SetTrigger("OnEnemyDeath");
+        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
         speed = 0;
        
 
@@ -92,11 +97,15 @@ public class Enemy : MonoBehaviour
             if (_player!=null)
             {
                 _player.Scoreup(10);
+                enemyLazerPrefab.SetActive(false);
             }
             EnemyDeath();
-            enemyLazerPrefab.SetActive(false);
+         
             Destroy(GetComponent< Collider2D >());
-            Destroy(this.gameObject,52.5f);
+           
+            Destroy(this.gameObject);
+            
+            
 
         }
         else if (other.tag == "Player")
@@ -105,11 +114,13 @@ public class Enemy : MonoBehaviour
             if (_player != null)
             {
                 _player.Damage();
+                enemyLazerPrefab.SetActive(false);
             }
 
             EnemyDeath();
            enemyLazerPrefab.SetActive(false);
             Destroy(GetComponent<Collider2D>());
+
             Destroy(this.gameObject,1.5f);
 
             

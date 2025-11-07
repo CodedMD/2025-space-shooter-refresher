@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    
-    
+
+   
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private GameObject _enemyHolder;
     [SerializeField] private GameObject _powerupHolder;
     [SerializeField]public GameObject[] _powerups;
+   
     //public GameObject[] _powerupIDs;
     private float randomX => Random.Range(-8f, 8f); 
     private bool _stopSpawning = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        
        
     }
     // Spawn enemies every 5 seconds
