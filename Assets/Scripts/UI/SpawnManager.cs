@@ -54,8 +54,8 @@ public class SpawnManager : MonoBehaviour
     public void Spawnpowerups()
     {
         int randomPowerup = Random.Range(0,3);
-        Instantiate(_powerups[randomPowerup], new Vector3(randomX, 7, 0), Quaternion.identity);
-       // NewPowerUp.transform.parent = _powerupHolder.transform;
+        GameObject NewPowerups = Instantiate(_powerups[randomPowerup], new Vector3(randomX, 7, 0), Quaternion.identity);
+        NewPowerups.transform.parent = _powerupHolder.transform;
     }
     public void OnPlayerDeath()
     {

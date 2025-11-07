@@ -11,16 +11,22 @@ public class Player : MonoBehaviour
     private GameObject _leftHurt;
     [SerializeField] public GameObject lazerPrefab;
     [SerializeField]public GameObject _tripleShotPrefab;
+
+
     // Shield Variables
     [SerializeField] public GameObject playerShield;
     [SerializeField] private GameObject _playerHurtShield;
     private bool _isShieldActive = false;
-    private bool _ishurtShieldActive = false;
+    //private bool _ishurtShieldActive = false;
     [SerializeField]
     private int _shieldLives = 3;
 
+    // Ninja Star Variables
+    private bool _ninjaStarActive = false;
+    [SerializeField]
+    private GameObject _ninjaStarPrefab;
 
-
+    //
     [SerializeField] private GameObject _thrusterBoost;
     [SerializeField] private float _fireRate = 0.1f;
     private float _canFire = -1f;
@@ -69,10 +75,12 @@ public class Player : MonoBehaviour
         _ammo = 15;
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
        _rightHurt.SetActive(false);
+        //_ishurtShieldActive = false;
         _leftHurt.SetActive(false);
         _isShieldActive = false;
         _isTripleShotActive = false;
         _isSpeedBoostActive = false;
+        //_isThrusterBoostActive = false;
         transform.position = new Vector3(0, -5, 0);
         if (_spawnManager == null)
         {
@@ -85,11 +93,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalculateMovement();
-        if (_isShieldActive == true)
-        {
-
-        }
-
+       
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
             
@@ -167,7 +171,7 @@ public class Player : MonoBehaviour
     }
     void ThrusterBoostActive()
     {
-        if (_thrusterBarPrecentage > 1 || _thrusterBarPrecentage < 100)
+        if (_thrusterBarPrecentage > 1 || _thrusterBarPrecentage < 100 && _isThrusterBoostActive==false)
         {
             _thrusterRecover = false;
             _isThrusterBoostActive = true;
@@ -192,6 +196,10 @@ public class Player : MonoBehaviour
             {
                 tripleshot();
             }
+            else if (_ninjaStarActive == true)
+            {
+                ninjaStarShot();
+            }
             else
             {
                 _audioSource.PlayOneShot(_lazerAudio);
@@ -212,6 +220,13 @@ public class Player : MonoBehaviour
         _audioSource.PlayOneShot(_lazerAudio);
         Instantiate(_tripleShotPrefab, transform.position + new Vector3(-0.5f, 1.05f, 0), Quaternion.identity);
        
+    }
+    void ninjaStarShot()
+    {
+        _audioSource.PlayOneShot(_lazerAudio);
+        // Instantiate Ninja Star Prefab logic here
+        Instantiate(_ninjaStarPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
+
     }
 
     public void Damage()
@@ -321,6 +336,16 @@ public class Player : MonoBehaviour
         _ammo = 15;
         _uiManager.UpdateAmmo(_ammo);
     }
+    public void ActivateNinjaStars()
+    {
+        _audioSource.PlayOneShot(_powerUpClip);
+        // Implement Ninja Stars activation logic here
+        _ninjaStarActive = true;
+
+        _ammo = 15;
+        StartCoroutine(NinjaStarActiveRoutine());
+
+    }
     public void ActivateTripleShot()
     {
         _isTripleShotActive = true;
@@ -363,6 +388,11 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         _isTripleShotActive = false;
+    }
+    IEnumerator NinjaStarActiveRoutine()
+    {
+          yield return new WaitForSeconds(5.0f);
+        _ninjaStarActive = false;
     }
     IEnumerator SpeedBoostPowerDownRoutine()
     {

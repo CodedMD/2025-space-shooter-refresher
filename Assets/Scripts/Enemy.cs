@@ -10,12 +10,19 @@ public class Enemy : MonoBehaviour
     private Animator _enemyAnimator;
     [SerializeField]
     private  GameObject enemyLazerPrefab;
+
     private int _canFire = -1;
     private float _fireRate = 3.0f;
+
+    [SerializeField]
+    private AudioSource _audioSource;
+    [SerializeField]
+    private AudioClip _explosionAudio;
     // Start is called before the first frame update
     void Start()
     {
-       _player = GameObject.Find("Player").GetComponent<Player>();
+        _audioSource = GetComponent<AudioSource>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
         _enemyAnimator = gameObject.GetComponent<Animator>();
         if (_player == null)
         {
@@ -31,10 +38,17 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //CinemachineShake sets enemy lazer prefab to inactive so we need to set it to active here
+        enemyLazerPrefab.gameObject.SetActive(true);
+
+        // fire lazer
         EnemyFire();
+
+        // define direction
         Vector3 direction = new Vector3(0,-1,0);
         // move the player
         transform.Translate(direction * speed * Time.deltaTime);
+        // respawn at top when off screen
         if (transform.position.y < -6f)
         {
             float randomX = Random.Range(-8f, 8f);
@@ -50,6 +64,7 @@ public class Enemy : MonoBehaviour
             _canFire = (int)(Time.time + _fireRate);
             GameObject enemyLazer = Instantiate(enemyLazerPrefab, transform.position, Quaternion.identity);
             Lazer[] lazers = enemyLazer.GetComponentsInChildren<Lazer>();
+           
             for (int i = 0; i < lazers.Length; i++)
             {
                 lazers[i].AssignEnemyLazer();
@@ -59,7 +74,8 @@ public class Enemy : MonoBehaviour
 
    public void EnemyDeath()
     {
-       _enemyAnimator.SetTrigger("OnEnemyDeath");
+        _audioSource.PlayOneShot(_explosionAudio);
+        _enemyAnimator.SetTrigger("OnEnemyDeath");
         speed = 0;
        
 
@@ -78,6 +94,7 @@ public class Enemy : MonoBehaviour
                 _player.Scoreup(10);
             }
             EnemyDeath();
+            enemyLazerPrefab.SetActive(false);
             Destroy(GetComponent< Collider2D >());
             Destroy(this.gameObject,52.5f);
 

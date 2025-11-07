@@ -51,6 +51,9 @@ public class Power_ups : MonoBehaviour
                         case 4:
                             player.HealPlayer();
                             break;
+                        case 5:
+                            player.ActivateNinjaStars();
+                            break;
                     default:
                         Debug.Log("Default case");
                         break;

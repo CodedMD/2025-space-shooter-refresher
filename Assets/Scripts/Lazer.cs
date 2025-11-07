@@ -39,7 +39,7 @@ public class Lazer : MonoBehaviour
     {
         
         transform.Translate(-direction * speed * Time.deltaTime);
-        if (transform.position.y < -6f)
+        if (transform.position.y < -3f)
         {
             if (transform.parent != null)
             {
