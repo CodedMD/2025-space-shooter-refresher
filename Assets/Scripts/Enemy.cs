@@ -118,10 +118,10 @@ public class Enemy : MonoBehaviour
             }
 
             EnemyDeath();
-           enemyLazerPrefab.SetActive(false);
+          
             Destroy(GetComponent<Collider2D>());
 
-            Destroy(this.gameObject,1.5f);
+            Destroy(this.gameObject);
 
             
         }

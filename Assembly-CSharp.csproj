@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Lazer.cs" />
     <Compile Include="Assets\Scripts\Ninja_Star_Shot.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Wave\Wave.cs" />
+    <Compile Include="Assets\Scripts\Spinning.cs" />
     <Compile Include="Assets\Scripts\UI\Main_Menu.cs" />
     <Compile Include="Assets\Scripts\UI\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />

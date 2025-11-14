@@ -150,19 +150,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d12075e9793677448822a42a3c97cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab:
-  - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
-  - {fileID: 3860631541965921168, guid: c782bf1ba40d03e42b3280de26626c42, type: 3}
+  _enemyWaves:
+  - waveName: 
+    numberOfWaves: 20
+    gameTypeObject:
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    spawnInterval: 2
+  - waveName: 
+    numberOfWaves: 15
+    gameTypeObject:
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    spawnInterval: 2
+  - waveName: 
+    numberOfWaves: 10
+    gameTypeObject:
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    - {fileID: 4800407655241445259, guid: da96e27a25cb6024fa3ad567694ca12d, type: 3}
+    spawnInterval: 0
+  _currentWave:
+    waveName: 
+    numberOfWaves: 0
+    gameTypeObject: []
+    spawnInterval: 0
+  _currentWaveNumber: 0
+  _canSpawn: 0
   _enemyHolder: {fileID: 1028770389}
   _powerupHolder: {fileID: 2028112292}
-  _powerups:
-  - {fileID: 3617451033203552160, guid: fdd4da896ecbb4841ab351b4ba2c0012, type: 3}
-  - {fileID: 514114539521328388, guid: 1b59af4bba577bc40ab25b9bfee4b992, type: 3}
-  - {fileID: 1144064704617413568, guid: b7ac6388a0d0ae94ea7fd13c3fa80306, type: 3}
-  - {fileID: 7451854378103224391, guid: 680142187b4983b46919027f102d20ea, type: 3}
-  - {fileID: 7600571490624774217, guid: 00e7dcc990f0a154098dc0f1d9ca6fb1, type: 3}
-  - {fileID: 3139982685328425590, guid: cffd01b6145603f45b49524e2536c5b0, type: 3}
-  - {fileID: 3139982685328425590, guid: cffd01b6145603f45b49524e2536c5b0, type: 3}
+  _powerupsWaves:
+  - waveName: 
+    numberOfWaves: 10
+    gameTypeObject:
+    - {fileID: 7451854378103224391, guid: 680142187b4983b46919027f102d20ea, type: 3}
+    - {fileID: 7600571490624774217, guid: 00e7dcc990f0a154098dc0f1d9ca6fb1, type: 3}
+    - {fileID: 7451854378103224391, guid: 680142187b4983b46919027f102d20ea, type: 3}
+    - {fileID: 3139982685328425590, guid: cffd01b6145603f45b49524e2536c5b0, type: 3}
+    - {fileID: 1144064704617413568, guid: b7ac6388a0d0ae94ea7fd13c3fa80306, type: 3}
+    spawnInterval: 0
+  - waveName: 
+    numberOfWaves: 10
+    gameTypeObject:
+    - {fileID: 7600571490624774217, guid: 00e7dcc990f0a154098dc0f1d9ca6fb1, type: 3}
+    - {fileID: 3139982685328425590, guid: cffd01b6145603f45b49524e2536c5b0, type: 3}
+    - {fileID: 1144064704617413568, guid: b7ac6388a0d0ae94ea7fd13c3fa80306, type: 3}
+    - {fileID: 514114539521328388, guid: 1b59af4bba577bc40ab25b9bfee4b992, type: 3}
+    - {fileID: 3617451033203552160, guid: fdd4da896ecbb4841ab351b4ba2c0012, type: 3}
+    spawnInterval: 0
+  - waveName: 
+    numberOfWaves: 10
+    gameTypeObject:
+    - {fileID: 7600571490624774217, guid: 00e7dcc990f0a154098dc0f1d9ca6fb1, type: 3}
+    - {fileID: 3139982685328425590, guid: cffd01b6145603f45b49524e2536c5b0, type: 3}
+    - {fileID: 1144064704617413568, guid: b7ac6388a0d0ae94ea7fd13c3fa80306, type: 3}
+    - {fileID: 514114539521328388, guid: 1b59af4bba577bc40ab25b9bfee4b992, type: 3}
+    - {fileID: 3617451033203552160, guid: fdd4da896ecbb4841ab351b4ba2c0012, type: 3}
+    spawnInterval: 0
+  _currentPowerUpWave:
+    waveName: 
+    numberOfWaves: 0
+    gameTypeObject: []
+    spawnInterval: 0
+  _currentPowerUpWaveNumber: 0
+  _canSpawnPowerup: 1
 --- !u!4 &53677171
 Transform:
   m_ObjectHideFlags: 0
