@@ -10,6 +10,8 @@ TagManager:
   - PowerUps
   - Enemy
   - Enemy_Sweeper
+  - EnemyLazerG
+  - Dodge_Box
   layers:
   - Default
   - TransparentFX

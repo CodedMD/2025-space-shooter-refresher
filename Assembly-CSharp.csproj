@@ -57,12 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Asteroid.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Boss_Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_Dodge.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy_Ram.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FireUppercut_Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Grabiod.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Tank_Enemy.cs" />
+    <Compile Include="Assets\Scripts\EventDelegator.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Grabiod.cs" />
-    <Compile Include="Assets\Scripts\Lazer.cs" />
-    <Compile Include="Assets\Scripts\Ninja_Star_Shot.cs" />
+    <Compile Include="Assets\Scripts\Lazers\BackFireLazer.cs" />
+    <Compile Include="Assets\Scripts\Lazers\Heat_Seeking_Lazer.cs" />
+    <Compile Include="Assets\Scripts\Lazers\Homing_Orbs.cs" />
+    <Compile Include="Assets\Scripts\Lazers\Lazer.cs" />
+    <Compile Include="Assets\Scripts\Lazers\Ninja_Star_Shot.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Wave\Wave.cs" />
     <Compile Include="Assets\Scripts\Spinning.cs" />

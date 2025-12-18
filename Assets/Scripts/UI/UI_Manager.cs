@@ -32,6 +32,8 @@ public class UI_Manager : MonoBehaviour
     private Text gameOver_Text;
     [SerializeField]
     private Text restartText;
+    [SerializeField]
+    private GameObject _areYouWorthy;
 
     // Reference to Player and Game Manager
     private Player _player;
@@ -43,6 +45,7 @@ public class UI_Manager : MonoBehaviour
     private Slider _thrusterBar;
     [SerializeField]
     private TMP_Text _thrusterBarPrecentage;
+
 
 
     // Start is called before the first frame update
@@ -66,7 +69,11 @@ public class UI_Manager : MonoBehaviour
     // Update the score display
     public void UpdateScore(int playerScore) { 
         _scoreText.text = "Score:"+ playerScore;
-    
+        if(playerScore == 20)
+        {
+            StartCoroutine(ProveItToTheBoss());
+        }
+
     }
     // Update the ammo image based on current ammo count
     public void UpdateAmmo(int currentAmmo)
@@ -102,6 +109,16 @@ public class UI_Manager : MonoBehaviour
         currentBoostLevel = Mathf.Clamp(currentBoostLevel, 0, 100);
         _thrusterBar.value = currentBoostLevel;
         _thrusterBarPrecentage.text = Mathf.RoundToInt(currentBoostLevel)  + "%";
+    }
+
+   
+    IEnumerator ProveItToTheBoss()
+    {
+    
+    yield return new WaitForSeconds(2.0f);
+        _areYouWorthy.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        _areYouWorthy.gameObject.SetActive(false);
     }
 
     public void GameOverSequence()

@@ -13,31 +13,37 @@ public class SpawnManager : MonoBehaviour
         public GameObject[] gameTypeObject;
         public float spawnInterval;
     }
-
+    //GameObjects
+    [SerializeField] private GameObject _enemyHolder;
+    [SerializeField] private GameObject _powerupHolder;
     // Wave tracker Variables
     [SerializeField] private Waves[] _enemyWaves;
-    [SerializeField] private Waves _currentWave;
-    [SerializeField] private int _currentWaveNumber;
+    [SerializeField] private Waves _currentEnemyWave;
+    [SerializeField] private int _currentEnemyWaveNumber;
     private float _nextSpawnTime;
    [SerializeField] private bool _canSpawn = true;
 
     //Game Object
    // [SerializeField] private GameObject[] _enemyPrefab;
-    [SerializeField] private GameObject _enemyHolder;
-    [SerializeField] private GameObject _powerupHolder;
+
     [SerializeField] public Waves[] _powerupsWaves;
     [SerializeField] public Waves _currentPowerUpWave;
     [SerializeField] protected int _currentPowerUpWaveNumber;
+
+
     private float _nextPowerupSpawnTime;
     [SerializeField] private bool _canSpawnPowerup = true;
 
     //public GameObject[] _powerupIDs;
     private float randomX => Random.Range(-8f, 8f); 
     private bool _stopSpawning = false;
+
+    private bool _bossCanSpawn = true;
+    [SerializeField] private GameObject _bossEnemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
-       _currentWaveNumber = 1;
+       _currentEnemyWaveNumber = 1;
     }
 
     // Update is called once per frame
@@ -53,9 +59,9 @@ public class SpawnManager : MonoBehaviour
     // use a coroutine to spawn enemies
     void SpawnTracker()
     {
-        _currentWave = _enemyWaves[_currentWaveNumber];
+        _currentEnemyWave = _enemyWaves[_currentEnemyWaveNumber];
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (totalEnemies.Length == 0 && !_canSpawn && _currentWaveNumber + 1 != _enemyWaves.Length)
+        if (totalEnemies.Length == 0 && !_canSpawn && _currentEnemyWaveNumber + 1 != _enemyWaves.Length)
         {
             SpawnNextWave();
         }
@@ -71,6 +77,22 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+   public void SpawnBossWave()
+    {
+        _canSpawn = false;
+        _bossCanSpawn = true;
+        StartCoroutine(BossCanSpawn());
+    }
+
+    IEnumerator BossCanSpawn()
+    {
+        yield return new WaitForSeconds(3.0f);
+        if (_bossCanSpawn == true)
+        {
+            GameObject boss = Instantiate(_bossEnemyPrefab, transform.position, Quaternion.identity);
+            boss.transform.parent = _enemyHolder.transform;
+        }
+    }
 
     public void StartSpawning()
     {
@@ -85,14 +107,14 @@ public class SpawnManager : MonoBehaviour
         {
             if (_canSpawn && _nextSpawnTime < Time.time)
             {
-                GameObject randomEnemy = _currentWave.gameTypeObject[Random.Range(0, _currentWave.gameTypeObject.Length)];
+                GameObject randomEnemy = _currentEnemyWave.gameTypeObject[Random.Range(0, _currentEnemyWave.gameTypeObject.Length)];
                 Vector3 posToSpawn = new Vector3(Random.Range(-8, 8), 7, 0);
                 GameObject newEnemy = Instantiate(randomEnemy, posToSpawn, Quaternion.identity);
 
                 newEnemy.transform.parent = _enemyHolder.transform;
-                _currentWave.numberOfWaves--;
-                _nextSpawnTime = Time.time + _currentWave.spawnInterval;
-                if (_currentWave.numberOfWaves == 0)
+                _currentEnemyWave.numberOfWaves--;
+                _nextSpawnTime = Time.time + _currentEnemyWave.spawnInterval;
+                if (_currentEnemyWave.numberOfWaves == 0)
                 {
                     _canSpawn = false;
                 }
@@ -124,7 +146,7 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnNextWave()
     {
-        _currentWaveNumber++;
+        _currentEnemyWaveNumber++;
 
         _canSpawn=true;
     }

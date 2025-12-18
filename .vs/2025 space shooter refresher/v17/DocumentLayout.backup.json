@@ -3,36 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Boss_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Boss_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Tank_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Tank_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemies\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Lazers\\Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\Spawn_Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\Spawn_Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\UI_Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\UI_Manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scriptable Objects\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Homing_Orbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Lazers\\Homing_Orbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\powerUps\\Power_ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\EventDelegator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EventDelegator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\FireUppercut_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FireUppercut_Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\BackFireLazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BackFireLazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +63,32 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Grabiod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Heat_Seeking_Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Heat_Seeking_Lazer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Spinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Spinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scriptable Objects\\Wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Ninja_Star_Shot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Ninja_Star_Shot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\powerUps\\Power_ups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,56 +102,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Spawn_Manager.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\Spawn_Manager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Spawn_Manager.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\Spawn_Manager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Spawn_Manager.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T02:55:25.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SpawnManager.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SpawnManager.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\SpawnManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIAwwAwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T02:49:17.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Asteroid.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Asteroid.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Asteroid.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T04:03:38.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAIBZwEsAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAUwDkBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T03:04:23.175Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tank_Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Tank_Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Tank_Enemy.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Tank_Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Tank_Enemy.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T19:34:00.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Enemy.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Enemy.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T19:33:42.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Lazer.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Lazer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Lazers\\Lazer.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Lazer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Lazers\\Lazer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T03:41:02.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Boss_Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Boss_Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\Boss_Enemy.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemies\\Boss_Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\Boss_Enemy.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T02:13:31.302Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Heat_Seeking_Lazer.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Lazers\\Heat_Seeking_Lazer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T01:52:18.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Homing_Orbs.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Homing_Orbs.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Lazers\\Homing_Orbs.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazers\\Homing_Orbs.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Lazers\\Homing_Orbs.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T00:33:55.022Z"
             },
             {
               "$type": "Document",
@@ -125,49 +198,121 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI_Manager.cs",
               "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\UI_Manager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\UI_Manager.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAIwFsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAiwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T02:59:44.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAIwCoAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Power_ups.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\powerUps\\Power_ups.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs",
+              "RelativeToolTip": "Assets\\Scripts\\powerUps\\Power_ups.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwCcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T03:56:51.189Z"
+              "WhenOpened": "2025-12-09T16:35:57.25Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Wave.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "SpawnManager.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SpawnManager.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\UI\\SpawnManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\SpawnManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T02:10:49.869Z"
+              "WhenOpened": "2025-11-08T02:49:17.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
+              "Title": "EventDelegator.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\EventDelegator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EventDelegator.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\EventDelegator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EventDelegator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwB8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T16:42:57.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BackFireLazer.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\BackFireLazer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BackFireLazer.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\BackFireLazer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BackFireLazer.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:57:41.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FireUppercut_Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\FireUppercut_Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FireUppercut_Enemy.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\FireUppercut_Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FireUppercut_Enemy.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAgwHUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T21:42:12.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Grabiod.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Grabiod.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Grabiod.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Grabiod.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Grabiod.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAKUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:44:31.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Lazer.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Lazer.cs",
               "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Lazer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Lazer.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAIBJwCkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T03:26:48.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
+              "Title": "Heat_Seeking_Lazer.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Heat_Seeking_Lazer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Heat_Seeking_Lazer.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Heat_Seeking_Lazer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Heat_Seeking_Lazer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T22:48:44.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Asteroid.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Asteroid.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Asteroid.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Asteroid.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:03:38.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Wave.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scriptable Objects\\Wave.cs",
@@ -179,19 +324,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Grabiod.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Grabiod.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Grabiod.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Grabiod.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Grabiod.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAIwFsAAABLAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "Wave.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Scriptable Objects\\Wave\\Wave.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T18:44:31.463Z"
+              "WhenOpened": "2025-11-08T02:10:49.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "Ninja_Star_Shot.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Ninja_Star_Shot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ninja_Star_Shot.cs",
@@ -203,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "Explosion.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Explosion.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
@@ -215,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -227,15 +372,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Power_ups.cs",
-              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\powerUps\\Power_ups.cs",
-              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\powerUps\\Power_ups.cs",
-              "RelativeToolTip": "Assets\\Scripts\\powerUps\\Power_ups.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "Spinning.cs",
+              "DocumentMoniker": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Spinning.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Spinning.cs",
+              "ToolTip": "C:\\Users\\CodedD2A\\Desktop\\Unity Projects\\2025 space shooter refresher\\Assets\\Scripts\\Spinning.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Spinning.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T18:24:28.187Z"
+              "WhenOpened": "2025-11-14T04:45:44.888Z"
             }
           ]
         }

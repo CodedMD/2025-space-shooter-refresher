@@ -10,16 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 467396437979272438}
   - component: {fileID: 7938547215913016486}
-  - component: {fileID: 5769281163042731329}
   - component: {fileID: -1584942394755913651}
   - component: {fileID: -787739434445158693}
+  - component: {fileID: 3441117198860146994}
   m_Layer: 0
   m_Name: Graboid_Lazer
   m_TagString: EnemyLazer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &467396437979272438
 Transform:
   m_ObjectHideFlags: 0
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1011168941
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 376a88a0f2a88964d93d531a211da82e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5769281163042731329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811359185796266744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22200bcfd32dfb24c956e54d76ae5dd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &-1584942394755913651
 Rigidbody2D:
   serializedVersion: 4
@@ -130,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010284722, y: -0.6571744}
+  m_Offset: {x: -0.010284722, y: 0.43845212}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -141,5 +129,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1129352, y: 1.7076205}
+  m_Size: {x: 1.1129352, y: 3.8988736}
   m_EdgeRadius: 0
+--- !u!114 &3441117198860146994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811359185796266744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291481f60dd9cf349b44cbcb10f2745f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceBetween: 5

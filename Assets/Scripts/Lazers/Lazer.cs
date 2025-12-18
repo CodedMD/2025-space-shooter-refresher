@@ -3,10 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Lazer : MonoBehaviour
-{ 
-    private float speed = 15f;
+{
+    private Player _player;
+    private float _speed = 15f;
     private Vector3 direction = Vector3.up;
    private bool isEnemyLazer = false;
+
+
+
+    void Start()
+    {
+        _player = GameObject.Find("Player").GetComponent<Player>();
+        if (_player == null)
+        {
+            Debug.Log("Player is null");
+        }
+       // _isHeatSeeking = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,14 +30,16 @@ public class Lazer : MonoBehaviour
         }
         else
         {
-            EnemyLazer();
-        }
+                    
+                EnemyLazer();    
 
+        }
+      
     }
 
     public void PlayerLazer()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(direction * _speed * Time.deltaTime);
         if (transform.position.y > 6f)
         {
             if (transform.parent != null)
@@ -38,7 +53,7 @@ public class Lazer : MonoBehaviour
     public void EnemyLazer()
     {
         
-        transform.Translate(-direction * speed * Time.deltaTime);
+        transform.Translate(-direction * _speed * Time.deltaTime);
         if (transform.position.y < -5f)
         {
             if (transform.parent != null)
@@ -48,6 +63,9 @@ public class Lazer : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+   
+
 
     public void AssignEnemyLazer()
     {

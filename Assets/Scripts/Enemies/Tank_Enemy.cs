@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grabiod : MonoBehaviour
+public class Tank_Enemy : MonoBehaviour
 {
     [SerializeField]
     private float speed = 4.0f;
     private Player _player;
+
     [SerializeField]
-    private Lazer _lazer;
+    private int _lives = 1;
+    [SerializeField]
+    private int _shieldLives = 1;
+    [SerializeField]
+    private GameObject _shieldVisualizer;
+    private bool _shieldActive = false;
+
     //[SerializeField]
     //private Animator _enemyAnimator;
     //[SerializeField]
@@ -36,27 +43,25 @@ public class Grabiod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _shieldVisualizer.SetActive(true);
+        _shieldActive = true;
         _audioSource = GetComponent<AudioSource>();
-       // _lazer = gameObject.GetComponent<Lazer>();
+        // _lazer = gameObject.GetComponent<Lazer>();
         _player = GameObject.Find("Player").GetComponent<Player>();
         //_enemyAnimator = gameObject.GetComponent<Animator>();
         if (_player == null)
         {
             Debug.LogError("Player is null");
         }
-       if (_lazer == null)
-        {
-            Debug.LogError("Enemy Lazer is null");
-        }
-
+      
+        _enemyBeam.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         //CinemachineShake sets enemy lazer prefab to inactive so we need to set it to active here
-        _enemyBeam.gameObject.SetActive(true);
+       
         if (_player != null)
         {
             GraboidMode();
@@ -66,11 +71,15 @@ public class Grabiod : MonoBehaviour
                 _canFire = Time.time + _fireRate;
                 // fire lazer
                 EnemyLazer();
-                
+
+            }
+            else if (Time.time < _canFire)
+            {
+                _enemyBeam.gameObject.SetActive(false);
             }
         }
 
-           
+
     }
 
     public void GraboidMode()
@@ -83,15 +92,17 @@ public class Grabiod : MonoBehaviour
         {
             _wayPointIndex += 1;
             if (_wayPointIndex == _wayPoint.Length)
-            { _wayPointIndex = 0; }
+            {
+                _wayPointIndex = 0;
+            }
 
         }
 
-        if(transform.position.x >= 9.0f)
+        if (transform.position.x >= 9.0f)
         {
-            transform.position = new Vector3(Random.Range(-9.0f, -9.90f), 1, 0); 
+            transform.position = new Vector3(Random.Range(-9.0f, -9.90f), 1, 0);
             Vector3.MoveTowards(transform.position, _wayPoint[_wayPointIndex].transform.position, speed * Time.deltaTime);
-        
+
         }
 
 
@@ -100,15 +111,38 @@ public class Grabiod : MonoBehaviour
     public void EnemyLazer()
     {
 
-        GameObject enemyLazer = Instantiate(_enemyBeam, transform.position + new Vector3(0,-1.5f,0), Quaternion.identity);
-        Lazer[] lazers = enemyLazer.GetComponentsInChildren<Lazer>();
 
-        for (int i = 0; i < lazers.Length; i++)
+        _enemyBeam.gameObject.SetActive(true);
+
+
+
+
+
+    }
+    public void Damage()
+    {
+        if (_shieldActive)
         {
-            lazers[i].AssignEnemyLazer();
+            _shieldLives--;
+            if (_shieldLives < 1)
+            {
+                _shieldActive = false;
+                _shieldVisualizer.SetActive(false);
+            }
         }
+        else
+        {
+            _lives--;
+            if (_lives < 1)
+            {
+                EnemyDeath();
+                _enemyBeam.SetActive(false);
+              
+                Destroy(GetComponent<Collider2D>());
 
-
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     public void EnemyDeath()
@@ -121,42 +155,44 @@ public class Grabiod : MonoBehaviour
 
     }
 
+
+
+
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
 
 
         if (other.tag == "PlayerLazer")
         {
-
+           
+            Damage();
             Destroy(other.gameObject);
             if (_player != null)
             {
                 _player.Scoreup(10);
-                _enemyBeam.SetActive(false);
+                
             }
-            EnemyDeath();
 
-            Destroy(GetComponent<Collider2D>());
-
-            Destroy(this.gameObject);
 
 
 
         }
         else if (other.tag == "Player")
         {
-
+            Damage();
             if (_player != null)
             {
                 _player.Damage();
-                _enemyBeam.SetActive(false);
+                //_enemyBeam.SetActive(false);
             }
 
-            EnemyDeath();
+            /*EnemyDeath();
             _enemyBeam.SetActive(false);
             Destroy(GetComponent<Collider2D>());
 
-            Destroy(this.gameObject, 1.5f);
+            Destroy(this.gameObject, 1.5f);*/
 
 
         }

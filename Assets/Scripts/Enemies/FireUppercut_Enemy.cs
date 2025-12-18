@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class FireUppercut_Enemy : MonoBehaviour
 {
     private float speed = 4.0f;
     private Player _player;
     [SerializeField]
     private Animator _enemyAnimator;
     [SerializeField]
-    private  GameObject enemyLazerPrefab;
-  
+    private GameObject enemyLazerPrefab;
+
     [SerializeField]
     private GameObject _explosionPrefab;
 
@@ -21,6 +21,15 @@ public class Enemy : MonoBehaviour
     private AudioSource _audioSource;
     [SerializeField]
     private AudioClip _explosionAudio;
+
+    [SerializeField]
+    private GameObject _backFirePrefab;
+    [SerializeField] private float minDistance = 1;
+    [SerializeField] private bool _backFireup = true;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +37,7 @@ public class Enemy : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _player = GameObject.Find("Player").GetComponent<Player>();
         _enemyAnimator = gameObject.GetComponent<Animator>();
+        //_backFirePrefab = gameObject.GetComponent<BackFireLazer>();
         if (_player == null)
         {
             Debug.LogError("Player is null");
@@ -42,6 +52,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (_player != null)
+        {
+           // _backFireup = true;
+            FireUppercut();
+        }
+        else if (_player == null)
+        {
+            _backFireup = true;
+        }
         //CinemachineShake sets enemy lazer prefab to inactive so we need to set it to active here
         enemyLazerPrefab.gameObject.SetActive(true);
 
@@ -49,7 +69,7 @@ public class Enemy : MonoBehaviour
         EnemyFire();
 
         // define direction
-        Vector3 direction = new Vector3(0,-1,0);
+        Vector3 direction = new Vector3(0, -1, 0);
         // move the player
         transform.Translate(direction * speed * Time.deltaTime);
         // respawn at top when off screen
@@ -61,8 +81,8 @@ public class Enemy : MonoBehaviour
     }
 
     public void EnemyFire()
-    { 
-          if(Time.time > _canFire)
+    {
+        if (Time.time > _canFire)
         {
             _fireRate = Random.Range(3.0f, 7.0f);
             _canFire = (int)(Time.time + _fireRate);
@@ -76,41 +96,61 @@ public class Enemy : MonoBehaviour
         }
     }
 
-   public void EnemyDeath()
+    public void EnemyDeath()
     {
         //_audioSource.PlayOneShot(_explosionAudio);
         //  _enemyAnimator.SetTrigger("OnEnemyDeath");
         Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
         speed = 0;
-       
 
+
+    }
+
+    private void FireUppercut()
+    {
+
+        float distancex = Mathf.Abs(_player.transform.position.x - transform.position.x);
+        if (_player.transform.position.y > transform.position.y && distancex < minDistance && _backFireup == true)
+        {
+            GameObject enemyLazer = Instantiate(_backFirePrefab, transform.position + new Vector3(0,0.88f, 0), Quaternion.identity);
+            BackFireLazer lazer = enemyLazer.GetComponent<BackFireLazer>();
+            _backFireup = false;
+            StartCoroutine(CanBackFire());
+        }
+        
+    }
+
+    IEnumerator CanBackFire()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _backFireup = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
 
-       
+
         if (other.tag == "PlayerLazer")
         {
-            
+
             Destroy(other.gameObject);
-            if (_player!=null)
+            if (_player != null)
             {
                 _player.Scoreup(10);
                 enemyLazerPrefab.SetActive(false);
             }
             EnemyDeath();
-         
-            Destroy(GetComponent< Collider2D >());
-           
+
+            Destroy(GetComponent<Collider2D>());
+
             Destroy(this.gameObject);
-            
-            
+
+
 
         }
         else if (other.tag == "Player")
         {
-            
+
             if (_player != null)
             {
                 _player.Damage();
@@ -118,12 +158,12 @@ public class Enemy : MonoBehaviour
             }
 
             EnemyDeath();
-          
+
             Destroy(GetComponent<Collider2D>());
 
             Destroy(this.gameObject);
 
-            
+
         }
     }
 }

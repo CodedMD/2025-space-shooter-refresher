@@ -57,6 +57,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611774253896302254, guid: 99c1d0229ab072540b19c25d09b32377,
+        type: 3}
+      propertyPath: _isHeatSeeking
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5307417921829555539, guid: 99c1d0229ab072540b19c25d09b32377,
         type: 3}
       propertyPath: m_RootOrder
@@ -155,6 +160,11 @@ PrefabInstance:
     - target: {fileID: 1611774253896302254, guid: 99c1d0229ab072540b19c25d09b32377,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611774253896302254, guid: 99c1d0229ab072540b19c25d09b32377,
+        type: 3}
+      propertyPath: _isHeatSeeking
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5307417921829555539, guid: 99c1d0229ab072540b19c25d09b32377,

@@ -26,6 +26,11 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _ninjaStarPrefab;
 
+    // Homing Orb Variables
+    public bool _homingOrbActive = false;
+    [SerializeField]
+     private GameObject _homingOrb;
+
     //
     [SerializeField] private GameObject _thrusterBoost;
     [SerializeField] private float _fireRate = 0.1f;
@@ -200,6 +205,10 @@ public class Player : MonoBehaviour
             {
                 ninjaStarShot();
             }
+            else if (_homingOrbActive == true)
+            {
+                HomingOrb();
+            }
             else
             {
                 _audioSource.PlayOneShot(_lazerAudio);
@@ -227,6 +236,11 @@ public class Player : MonoBehaviour
         // Instantiate Ninja Star Prefab logic here
         Instantiate(_ninjaStarPrefab, transform.position + new Vector3(0, 1.05f, 0), Quaternion.identity);
 
+    }
+    void HomingOrb()
+    {
+        _audioSource.PlayOneShot(_lazerAudio);
+        Instantiate(_homingOrb, transform.position + new Vector3(0, 5.15f, 0), Quaternion.identity);
     }
 
     public void Damage()
@@ -294,6 +308,13 @@ public class Player : MonoBehaviour
 
         _score += points;
        _uiManager.UpdateScore(_score);
+
+        if(_score == 20 && gameObject != null)
+        {
+            _spawnManager.SpawnBossWave();
+        }
+
+
     }
 
 
@@ -346,6 +367,14 @@ public class Player : MonoBehaviour
         StartCoroutine(NinjaStarActiveRoutine());
 
     }
+    public void ActivateHomingOrbs()
+    {
+        _audioSource.PlayOneShot(_powerUpClip);
+        // Implement Homing Orbs activation logic here
+        _homingOrbActive = true;
+        _ammo = 15;
+       StartCoroutine(HomingOrbActiveRoutine());
+    }
     public void ActivateTripleShot()
     {
         _isTripleShotActive = true;
@@ -394,6 +423,11 @@ public class Player : MonoBehaviour
           yield return new WaitForSeconds(5.0f);
         _ninjaStarActive = false;
     }
+    IEnumerator HomingOrbActiveRoutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        _homingOrbActive = false;
+    }
     IEnumerator SpeedBoostPowerDownRoutine()
     {
         yield return new WaitForSeconds(5.0f);
@@ -438,7 +472,7 @@ public class Player : MonoBehaviour
         if (other.tag == "EnemyLazer")
         {
            Damage();
-
+            Destroy(other.gameObject);
         }
     }
 

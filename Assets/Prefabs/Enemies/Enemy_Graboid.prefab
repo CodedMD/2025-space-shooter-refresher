@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  _lazer: {fileID: 1611774253896302254, guid: 99c1d0229ab072540b19c25d09b32377, type: 3}
+  _lazer: {fileID: 3441117198860146994, guid: 7ce644bb04d325940b6b7053f4d1f781, type: 3}
   _explosionPrefab: {fileID: 8981608935107439260, guid: cfe200a5d8df11c43a7e05b74c0e9f94,
     type: 3}
   _audioSource: {fileID: 7903079579239573608}
